@@ -8,6 +8,10 @@ The year layoffs began and how they evolved over time
 
 The number of employees laid off at the start of the layoff season
 
+The data set used can be found here:-
+
+
+
 The company stage (e.g., post-IPO, late stage) where most layoffs occurred
 
 The industry and company responsible for the most total layoffs
