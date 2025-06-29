@@ -9,6 +9,7 @@ The year layoffs began and how they evolved over time
 The number of employees laid off at the start of the layoff season
 
 The data set used can be found here:-
+https://github.com/krishn904/sql-projects-and-EDA-using-sql/blob/main/layoffs.csv
 
 
 
