@@ -1,20 +1,49 @@
-In this SQL project, I performed data cleaning and exploratory data analysis (EDA) on a tech layoffs dataset. I used SQL functions like ROW_NUMBER(), STR_TO_DATE(), and window functions to clean the data, remove duplicates, and convert dates into usable formats.
+# 📊 Global Layoffs Analysis — SQL + Power BI
 
-Through EDA, I uncovered key insights such as:
+## 📌 Project Overview
+This project focuses on cleaning, analyzing, and visualizing global layoff data using **SQL** for preprocessing and **Power BI** for dashboard creation.
 
-The top 5 companies each year with the highest layoffs
+---
 
-The year layoffs began and how they evolved over time
+## 🛠 Tools & Technologies
+- **SQL (MySQL)** — Data cleaning & transformation
+- **Power BI** — Data visualization & dashboarding
 
-The number of employees laid off at the start of the layoff season
+---
+
+## 📂 Dataset
+The dataset contains company layoffs information with fields such as:
+- Company
+- Location
+- Industry
+- Total laid off
+- Percentage laid off
+- Date
+- Stage
+- Country
+- Funds raised
+
+---
+
+## 🔄 Data Cleaning Steps in SQL
+Key operations performed:
+1. **Remove Duplicates** using `ROW_NUMBER()` and `DELETE`.
+2. **Standardize Text** — Trim spaces, unify case, correct industry/country names.
+3. **Convert Date Formats** — `STR_TO_DATE()` and proper `DATE` data type.
+4. **Handle Missing Values** — Fill missing `industry` using other records for the same company.
+5. **Remove Null Records** — Dropped rows where both `total_laid_off` and `percentage_laid_off` were null.
+
+Example snippet:
+```sql
+UPDATE layoff_statiging2
+SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+
+DELETE FROM layoff_statiging2
+WHERE total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
 
 The data set used can be found here:-
 https://github.com/krishn904/sql-projects-and-EDA-using-sql/blob/main/layoffs.csv
 
 
-
-The company stage (e.g., post-IPO, late stage) where most layoffs occurred
-
-The industry and company responsible for the most total layoffs
-
-This project showcases my ability to prepare real-world data for analysis and extract valuable insights using SQL.
